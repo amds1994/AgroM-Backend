@@ -10,7 +10,7 @@ public class Util {
 	
 	// compress the image bytes before storing it in the database
 		public static byte[] compressZLib(byte[] data) {
-			Deflater deflater = new Deflater();
+			Deflater deflater = new Deflater(3);
 			deflater.setInput(data);
 			deflater.finish();
 
